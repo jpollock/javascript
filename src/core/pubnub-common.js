@@ -7,6 +7,38 @@ import ListenerManager from './components/listener_manager';
 
 import endpointCreator from './components/endpoint';
 
+/* message data */
+import * as messageCountsConfig from './endpoints/uuid_metadata/message_counts';
+import * as addMessageMetadataConfig from './endpoints/uuid_metadata/set_message_metadata';
+import * as getMessageReactions from './endpoints/uuid_metadata/get_message_metadata';
+import * as deleteMessageMetadataConfig from './endpoints/uuid_metadata/delete_message_metadata';
+
+/* user, device, and channel data */
+import * as setUserDataConfig from './endpoints/uuid_metadata/set_user_metadata';
+import * as getUserDataConfig from './endpoints/uuid_metadata/get_user_metadata';
+import * as setDeviceDataConfig from './endpoints/uuid_metadata/set_device_metadata';
+import * as getDeviceDataConfig from './endpoints/uuid_metadata/get_device_metadata';
+import * as deleteUserDataConfig from './endpoints/uuid_metadata/delete_user_metadata';
+import * as deleteDeviceDataConfig from './endpoints/uuid_metadata/delete_device_metadata';
+
+
+import * as addDeviceToUserConfig from './endpoints/uuid_metadata/add_device_to_user';
+import * as removeDeviceFromUserConfig from './endpoints/uuid_metadata/remove_device_from_user';
+import * as listDevicesForUserConfig from './endpoints/uuid_metadata/list_devices_for_user';
+
+import * as getChannelsDataConfig from './endpoints/uuid_metadata/get_channels_metadata';
+import * as setChannelDataConfig from './endpoints/uuid_metadata/set_channel_metadata';
+import * as getChannelDataConfig from './endpoints/uuid_metadata/get_channel_metadata';
+import * as deleteChannelDataConfig from './endpoints/uuid_metadata/delete_channel_metadata';
+import * as addUserToChannelConfig from './endpoints/uuid_metadata/add_user_to_channel';
+import * as removeUserFromChannelConfig from './endpoints/uuid_metadata/remove_user_from_channel';
+import * as listUsersInChannelConfig from './endpoints/uuid_metadata/list_users_in_channel';
+import * as listChannelsForUserConfig from './endpoints/uuid_metadata/list_channels_for_user';
+import * as addDeviceToChannelConfig from './endpoints/uuid_metadata/add_device_to_channel';
+import * as removeDeviceFromChannelConfig from './endpoints/uuid_metadata/remove_device_from_channel';
+import * as listDevicesInChannelConfig from './endpoints/uuid_metadata/list_devices_in_channel';
+import * as listChannelsForDeviceConfig from './endpoints/uuid_metadata/list_channels_for_device';
+
 import * as addChannelsChannelGroupConfig from './endpoints/channel_groups/add_channels';
 import * as removeChannelsChannelGroupConfig from './endpoints/channel_groups/remove_channels';
 import * as deleteChannelGroupConfig from './endpoints/channel_groups/delete_group';
@@ -111,11 +143,9 @@ export default class {
 
     const config = this._config = new Config({ setup, db });
     const crypto = new Crypto({ config });
-
     networking.init(config);
 
     let modules = { config, networking, crypto };
-
     const timeEndpoint = endpointCreator.bind(this, modules, timeEndpointConfig);
     const leaveEndpoint = endpointCreator.bind(this, modules, presenceLeaveEndpointConfig);
     const heartbeatEndpoint = endpointCreator.bind(this, modules, presenceHeartbeatEndpointConfig);
@@ -166,6 +196,41 @@ export default class {
     //
     this.publish = endpointCreator.bind(this, modules, publishEndpointConfig);
 
+    this.messageCounts = endpointCreator.bind(this, modules, messageCountsConfig);
+    this.addMessageReaction = endpointCreator.bind(this, modules, addMessageMetadataConfig);
+    this.getMessageReactions = endpointCreator.bind(this, modules, getMessageReactions);
+    this.deleteMessageMetadata = endpointCreator.bind(this, modules, deleteMessageMetadataConfig);
+    this.setUserData = endpointCreator.bind(this, modules, setUserDataConfig);
+    this.getUserData = endpointCreator.bind(this, modules, getUserDataConfig);
+    this.deleteUserData = endpointCreator.bind(this, modules, deleteUserDataConfig);
+    this.setDeviceData = endpointCreator.bind(this, modules, setDeviceDataConfig);
+    this.getDeviceData = endpointCreator.bind(this, modules, getDeviceDataConfig);
+    this.deleteDeviceData = endpointCreator.bind(this, modules, deleteDeviceDataConfig);
+    this.addDeviceToUser = endpointCreator.bind(this, modules, addDeviceToUserConfig);
+    this.removeDeviceFromUser = endpointCreator.bind(this, modules, removeDeviceFromUserConfig);
+    this.listDevicesForUser = endpointCreator.bind(this, modules, listDevicesForUserConfig);
+
+    /*
+    this.addUuidToChannelGroup = endpointCreator.default.bind(this, modules, addUuidToChannelGroupConfig);
+    this.removeUuidFromChannelGroup = endpointCreator.default.bind(this, modules, removeUuidFromChannelGroupConfig);
+    this.listUuidsInChannelGroup = endpointCreator.default.bind(this, modules, listUuidsInChannelGroupConfig);
+    this.setChannelGroupMetadata = endpointCreator.default.bind(this, modules, setChannelGroupMetadataConfig);
+    this.getChannelGroupMetadata = endpointCreator.default.bind(this, modules, getChannelGroupMetadataConfig);
+    this.deleteChannelGroupMetadata = endpointCreator.default.bind(this, modules, deleteChannelGroupMetadataConfig);
+    */
+    this.addUserToChannel = endpointCreator.bind(this, modules, addUserToChannelConfig);
+    this.removeUserFromChannel = endpointCreator.bind(this, modules, removeUserFromChannelConfig);
+    this.listUsersInChannel = endpointCreator.bind(this, modules, listUsersInChannelConfig);
+    this.listChannelsForUser = endpointCreator.bind(this, modules, listChannelsForUserConfig);
+    this.addDeviceToChannel = endpointCreator.bind(this, modules, addDeviceToChannelConfig);
+    this.removeDeviceFromChannel = endpointCreator.bind(this, modules, removeDeviceFromChannelConfig);
+    this.listDeviceInChannel = endpointCreator.bind(this, modules, listDevicesInChannelConfig);
+    this.listDevicesForUser = endpointCreator.bind(this, modules, listChannelsForDeviceConfig);
+    this.getChannelsData = endpointCreator.bind(this, modules, getChannelsDataConfig);
+    this.setChannelData = endpointCreator.bind(this, modules, setChannelDataConfig);
+    this.getChannelData = endpointCreator.bind(this, modules, getChannelDataConfig);
+    this.deleteChannelData = endpointCreator.bind(this, modules, deleteChannelDataConfig);
+    
     this.fire = (args, callback) => {
       args.replicate = false;
       args.storeInHistory = false;

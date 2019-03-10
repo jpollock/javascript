@@ -90,7 +90,17 @@ export function get(params: Object, endpoint: EndpointDefinition, callback: Func
 
 export function post(params: Object, body: string, endpoint: EndpointDefinition, callback: Function): superagent {
   let superagentConstruct = superagent
-    .post(this.getStandardOrigin() + endpoint.url)
+    .put(this.getStandardOrigin() + endpoint.url) // JEREMY!
+    .set('Content-Type', 'application/json')
+    .query(params)
+    .send(body);
+  return xdr.call(this, superagentConstruct, endpoint, callback);
+}
+
+export function put(params: Object, body: string, endpoint: EndpointDefinition, callback: Function): superagent {
+  let superagentConstruct = superagent
+    .put(this.getStandardOrigin() + endpoint.url)
+    .set('Content-Type', 'application/json')
     .query(params)
     .send(body);
   return xdr.call(this, superagentConstruct, endpoint, callback);

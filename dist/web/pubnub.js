@@ -1,4 +1,4 @@
-/*! 4.21.7 / Consumer  */
+/*! 4.21.8 / Consumer  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -65,15 +65,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _pubnubCommon2 = _interopRequireDefault(_pubnubCommon);
 
-	var _networking = __webpack_require__(39);
+	var _networking = __webpack_require__(64);
 
 	var _networking2 = _interopRequireDefault(_networking);
 
-	var _web = __webpack_require__(40);
+	var _web = __webpack_require__(65);
 
 	var _web2 = _interopRequireDefault(_web);
 
-	var _webNode = __webpack_require__(41);
+	var _webNode = __webpack_require__(66);
 
 	var _flow_interfaces = __webpack_require__(5);
 
@@ -159,87 +159,187 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _endpoint2 = _interopRequireDefault(_endpoint);
 
-	var _add_channels = __webpack_require__(17);
+	var _message_counts = __webpack_require__(17);
+
+	var messageCountsConfig = _interopRequireWildcard(_message_counts);
+
+	var _set_message_metadata = __webpack_require__(18);
+
+	var addMessageMetadataConfig = _interopRequireWildcard(_set_message_metadata);
+
+	var _get_message_metadata = __webpack_require__(19);
+
+	var getMessageReactions = _interopRequireWildcard(_get_message_metadata);
+
+	var _delete_message_metadata = __webpack_require__(20);
+
+	var deleteMessageMetadataConfig = _interopRequireWildcard(_delete_message_metadata);
+
+	var _set_user_metadata = __webpack_require__(21);
+
+	var setUserDataConfig = _interopRequireWildcard(_set_user_metadata);
+
+	var _get_user_metadata = __webpack_require__(22);
+
+	var getUserDataConfig = _interopRequireWildcard(_get_user_metadata);
+
+	var _set_device_metadata = __webpack_require__(23);
+
+	var setDeviceDataConfig = _interopRequireWildcard(_set_device_metadata);
+
+	var _get_device_metadata = __webpack_require__(24);
+
+	var getDeviceDataConfig = _interopRequireWildcard(_get_device_metadata);
+
+	var _delete_user_metadata = __webpack_require__(25);
+
+	var deleteUserDataConfig = _interopRequireWildcard(_delete_user_metadata);
+
+	var _delete_device_metadata = __webpack_require__(26);
+
+	var deleteDeviceDataConfig = _interopRequireWildcard(_delete_device_metadata);
+
+	var _add_device_to_user = __webpack_require__(27);
+
+	var addDeviceToUserConfig = _interopRequireWildcard(_add_device_to_user);
+
+	var _remove_device_from_user = __webpack_require__(28);
+
+	var removeDeviceFromUserConfig = _interopRequireWildcard(_remove_device_from_user);
+
+	var _list_devices_for_user = __webpack_require__(29);
+
+	var listDevicesForUserConfig = _interopRequireWildcard(_list_devices_for_user);
+
+	var _get_channels_metadata = __webpack_require__(30);
+
+	var getChannelsDataConfig = _interopRequireWildcard(_get_channels_metadata);
+
+	var _set_channel_metadata = __webpack_require__(31);
+
+	var setChannelDataConfig = _interopRequireWildcard(_set_channel_metadata);
+
+	var _get_channel_metadata = __webpack_require__(32);
+
+	var getChannelDataConfig = _interopRequireWildcard(_get_channel_metadata);
+
+	var _delete_channel_metadata = __webpack_require__(33);
+
+	var deleteChannelDataConfig = _interopRequireWildcard(_delete_channel_metadata);
+
+	var _add_user_to_channel = __webpack_require__(34);
+
+	var addUserToChannelConfig = _interopRequireWildcard(_add_user_to_channel);
+
+	var _remove_user_from_channel = __webpack_require__(35);
+
+	var removeUserFromChannelConfig = _interopRequireWildcard(_remove_user_from_channel);
+
+	var _list_users_in_channel = __webpack_require__(36);
+
+	var listUsersInChannelConfig = _interopRequireWildcard(_list_users_in_channel);
+
+	var _list_channels_for_user = __webpack_require__(37);
+
+	var listChannelsForUserConfig = _interopRequireWildcard(_list_channels_for_user);
+
+	var _add_device_to_channel = __webpack_require__(38);
+
+	var addDeviceToChannelConfig = _interopRequireWildcard(_add_device_to_channel);
+
+	var _remove_device_from_channel = __webpack_require__(39);
+
+	var removeDeviceFromChannelConfig = _interopRequireWildcard(_remove_device_from_channel);
+
+	var _list_devices_in_channel = __webpack_require__(40);
+
+	var listDevicesInChannelConfig = _interopRequireWildcard(_list_devices_in_channel);
+
+	var _list_channels_for_device = __webpack_require__(41);
+
+	var listChannelsForDeviceConfig = _interopRequireWildcard(_list_channels_for_device);
+
+	var _add_channels = __webpack_require__(42);
 
 	var addChannelsChannelGroupConfig = _interopRequireWildcard(_add_channels);
 
-	var _remove_channels = __webpack_require__(18);
+	var _remove_channels = __webpack_require__(43);
 
 	var removeChannelsChannelGroupConfig = _interopRequireWildcard(_remove_channels);
 
-	var _delete_group = __webpack_require__(19);
+	var _delete_group = __webpack_require__(44);
 
 	var deleteChannelGroupConfig = _interopRequireWildcard(_delete_group);
 
-	var _list_groups = __webpack_require__(20);
+	var _list_groups = __webpack_require__(45);
 
 	var listChannelGroupsConfig = _interopRequireWildcard(_list_groups);
 
-	var _list_channels = __webpack_require__(21);
+	var _list_channels = __webpack_require__(46);
 
 	var listChannelsInChannelGroupConfig = _interopRequireWildcard(_list_channels);
 
-	var _add_push_channels = __webpack_require__(22);
+	var _add_push_channels = __webpack_require__(47);
 
 	var addPushChannelsConfig = _interopRequireWildcard(_add_push_channels);
 
-	var _remove_push_channels = __webpack_require__(23);
+	var _remove_push_channels = __webpack_require__(48);
 
 	var removePushChannelsConfig = _interopRequireWildcard(_remove_push_channels);
 
-	var _list_push_channels = __webpack_require__(24);
+	var _list_push_channels = __webpack_require__(49);
 
 	var listPushChannelsConfig = _interopRequireWildcard(_list_push_channels);
 
-	var _remove_device = __webpack_require__(25);
+	var _remove_device = __webpack_require__(50);
 
 	var removeDevicePushConfig = _interopRequireWildcard(_remove_device);
 
-	var _leave = __webpack_require__(26);
+	var _leave = __webpack_require__(51);
 
 	var presenceLeaveEndpointConfig = _interopRequireWildcard(_leave);
 
-	var _where_now = __webpack_require__(27);
+	var _where_now = __webpack_require__(52);
 
 	var presenceWhereNowEndpointConfig = _interopRequireWildcard(_where_now);
 
-	var _heartbeat = __webpack_require__(28);
+	var _heartbeat = __webpack_require__(53);
 
 	var presenceHeartbeatEndpointConfig = _interopRequireWildcard(_heartbeat);
 
-	var _get_state = __webpack_require__(29);
+	var _get_state = __webpack_require__(54);
 
 	var presenceGetStateConfig = _interopRequireWildcard(_get_state);
 
-	var _set_state = __webpack_require__(30);
+	var _set_state = __webpack_require__(55);
 
 	var presenceSetStateConfig = _interopRequireWildcard(_set_state);
 
-	var _here_now = __webpack_require__(31);
+	var _here_now = __webpack_require__(56);
 
 	var presenceHereNowConfig = _interopRequireWildcard(_here_now);
 
-	var _audit = __webpack_require__(32);
+	var _audit = __webpack_require__(57);
 
 	var auditEndpointConfig = _interopRequireWildcard(_audit);
 
-	var _grant = __webpack_require__(33);
+	var _grant = __webpack_require__(58);
 
 	var grantEndpointConfig = _interopRequireWildcard(_grant);
 
-	var _publish = __webpack_require__(34);
+	var _publish = __webpack_require__(59);
 
 	var publishEndpointConfig = _interopRequireWildcard(_publish);
 
-	var _get_history = __webpack_require__(35);
+	var _get_history = __webpack_require__(60);
 
 	var historyEndpointConfig = _interopRequireWildcard(_get_history);
 
-	var _delete_messages = __webpack_require__(36);
+	var _delete_messages = __webpack_require__(61);
 
 	var deleteMessagesEndpointConfig = _interopRequireWildcard(_delete_messages);
 
-	var _fetch_messages = __webpack_require__(37);
+	var _fetch_messages = __webpack_require__(62);
 
 	var fetchMessagesEndpointConfig = _interopRequireWildcard(_fetch_messages);
 
@@ -247,7 +347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var timeEndpointConfig = _interopRequireWildcard(_time);
 
-	var _subscribe = __webpack_require__(38);
+	var _subscribe = __webpack_require__(63);
 
 	var subscribeEndpointConfig = _interopRequireWildcard(_subscribe);
 
@@ -283,11 +383,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    var config = this._config = new _config2.default({ setup: setup, db: db });
 	    var crypto = new _index2.default({ config: config });
-
 	    networking.init(config);
 
 	    var modules = { config: config, networking: networking, crypto: crypto };
-
 	    var timeEndpoint = _endpoint2.default.bind(this, modules, timeEndpointConfig);
 	    var leaveEndpoint = _endpoint2.default.bind(this, modules, presenceLeaveEndpointConfig);
 	    var heartbeatEndpoint = _endpoint2.default.bind(this, modules, presenceHeartbeatEndpointConfig);
@@ -335,6 +433,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.audit = _endpoint2.default.bind(this, modules, auditEndpointConfig);
 
 	    this.publish = _endpoint2.default.bind(this, modules, publishEndpointConfig);
+
+	    this.messageCounts = _endpoint2.default.bind(this, modules, messageCountsConfig);
+	    this.addMessageReaction = _endpoint2.default.bind(this, modules, addMessageMetadataConfig);
+	    this.getMessageReactions = _endpoint2.default.bind(this, modules, getMessageReactions);
+	    this.deleteMessageMetadata = _endpoint2.default.bind(this, modules, deleteMessageMetadataConfig);
+	    this.setUserData = _endpoint2.default.bind(this, modules, setUserDataConfig);
+	    this.getUserData = _endpoint2.default.bind(this, modules, getUserDataConfig);
+	    this.deleteUserData = _endpoint2.default.bind(this, modules, deleteUserDataConfig);
+	    this.setDeviceData = _endpoint2.default.bind(this, modules, setDeviceDataConfig);
+	    this.getDeviceData = _endpoint2.default.bind(this, modules, getDeviceDataConfig);
+	    this.deleteDeviceData = _endpoint2.default.bind(this, modules, deleteDeviceDataConfig);
+	    this.addDeviceToUser = _endpoint2.default.bind(this, modules, addDeviceToUserConfig);
+	    this.removeDeviceFromUser = _endpoint2.default.bind(this, modules, removeDeviceFromUserConfig);
+	    this.listDevicesForUser = _endpoint2.default.bind(this, modules, listDevicesForUserConfig);
+
+	    this.addUserToChannel = _endpoint2.default.bind(this, modules, addUserToChannelConfig);
+	    this.removeUserFromChannel = _endpoint2.default.bind(this, modules, removeUserFromChannelConfig);
+	    this.listUsersInChannel = _endpoint2.default.bind(this, modules, listUsersInChannelConfig);
+	    this.listChannelsForUser = _endpoint2.default.bind(this, modules, listChannelsForUserConfig);
+	    this.addDeviceToChannel = _endpoint2.default.bind(this, modules, addDeviceToChannelConfig);
+	    this.removeDeviceFromChannel = _endpoint2.default.bind(this, modules, removeDeviceFromChannelConfig);
+	    this.listDeviceInChannel = _endpoint2.default.bind(this, modules, listDevicesInChannelConfig);
+	    this.listDevicesForUser = _endpoint2.default.bind(this, modules, listChannelsForDeviceConfig);
+	    this.getChannelsData = _endpoint2.default.bind(this, modules, getChannelsDataConfig);
+	    this.setChannelData = _endpoint2.default.bind(this, modules, setChannelDataConfig);
+	    this.getChannelData = _endpoint2.default.bind(this, modules, getChannelDataConfig);
+	    this.deleteChannelData = _endpoint2.default.bind(this, modules, deleteChannelDataConfig);
 
 	    this.fire = function (args, callback) {
 	      args.replicate = false;
@@ -2230,7 +2355,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  PNRemoveChannelsFromGroupOperation: 'PNRemoveChannelsFromGroupOperation',
 
 	  PNAccessManagerGrant: 'PNAccessManagerGrant',
-	  PNAccessManagerAudit: 'PNAccessManagerAudit'
+	  PNAccessManagerAudit: 'PNAccessManagerAudit',
+
+	  PNUuidMetadataCreate: 'PNUuidMetadataCreate'
 	};
 	module.exports = exports['default'];
 
@@ -2449,6 +2576,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (endpoint.usePost && endpoint.usePost(modules, incomingParams)) {
 	    var payload = endpoint.postPayload(modules, incomingParams);
 	    callInstance = networking.POST(outgoingParams, payload, networkingParams, onResponse);
+	  } else if (endpoint.usePut && endpoint.usePut()) {
+	    var _payload = endpoint.postPayload(modules, incomingParams);
+	    callInstance = networking.PUT(outgoingParams, _payload, networkingParams, onResponse);
 	  } else if (endpoint.useDelete && endpoint.useDelete()) {
 	    callInstance = networking.DELETE(outgoingParams, networkingParams, onResponse);
 	  } else {
@@ -2520,6 +2650,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	function decideURL(endpoint, modules, incomingParams) {
 	  if (endpoint.usePost && endpoint.usePost(modules, incomingParams)) {
 	    return endpoint.postURL(modules, incomingParams);
+	  } else if (endpoint.usePut && endpoint.usePut(modules, incomingParams)) {
+	    return endpoint.putURL(modules, incomingParams);
+	  } else if (endpoint.useDelete && endpoint.useDelete(modules, incomingParams)) {
+	    return endpoint.deleteURL(modules, incomingParams);
 	  } else {
 	    return endpoint.getURL(modules, incomingParams);
 	  }
@@ -2561,6 +2695,2013 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 /* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channels = incomingParams.channels,
+	      channelTimeTokens = incomingParams.channelTimeTokens;
+	  var config = modules.config;
+
+
+	  if (!channelTimeTokens) return 'Missing ChannelTimeTokens';
+	  if (!channels || channels.length === 0) return 'Missing Channels';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var channels = incomingParams.channels,
+	      channelTimeTokens = incomingParams.channelTimeTokens;
+	  var config = modules.config;
+
+	  return '/v3/history/sub-key/' + config.subscribeKey + '/message-counts/' + channels + '?channelsTimetoken=' + channelTimeTokens;
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.usePut = usePut;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.putURL = putURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.postPayload = postPayload;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function usePut() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channel = incomingParams.channel,
+	      timetoken = incomingParams.timetoken;
+	  var config = modules.config;
+
+
+	  if (!channel) return 'Missing Channel';
+	  if (!timetoken) return 'Missing timetoken';
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function putURL(modules, incomingParams) {
+	  var channel = incomingParams.channel,
+	      timetoken = incomingParams.timetoken;
+	  var config = modules.config;
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/channels/' + channel + '/message/' + timetoken + '/action';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+
+	function prepareMessagePayload(modules, messagePayload) {
+	  var crypto = modules.crypto,
+	      config = modules.config;
+
+	  var stringifiedPayload = JSON.stringify(messagePayload);
+
+	  if (config.cipherKey) {
+	    stringifiedPayload = crypto.encrypt(stringifiedPayload);
+	    stringifiedPayload = JSON.stringify(stringifiedPayload);
+	  }
+
+	  return stringifiedPayload;
+	}
+
+	function postPayload(modules, incomingParams) {
+	  var message = incomingParams.message;
+
+	  return prepareMessagePayload(modules, message);
+	}
+
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channels = incomingParams.channels,
+	      channelGroup = incomingParams.channelGroup;
+	  var config = modules.config;
+
+
+	  if (!channelGroup) return 'Missing Channel Group';
+	  if (!channels || channels.length === 0) return 'Missing Channels';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/${config.subscribeKey}/uuid/{$uuid}';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.useDelete = useDelete;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.deleteURL = deleteURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function useDelete() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channels = incomingParams.channels,
+	      channelGroup = incomingParams.channelGroup;
+	  var config = modules.config;
+
+
+	  if (!channelGroup) return 'Missing Channel Group';
+	  if (!channels || channels.length === 0) return 'Missing Channels';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function deleteURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/${config.subscribeKey}/uuid/{$uuid}';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.usePut = usePut;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.putURL = putURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.postPayload = postPayload;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function usePut() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function putURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + uuid;
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+
+	function prepareMessagePayload(modules, messagePayload) {
+	  var crypto = modules.crypto,
+	      config = modules.config;
+
+	  var stringifiedPayload = JSON.stringify(messagePayload);
+
+	  if (config.cipherKey) {
+	    stringifiedPayload = crypto.encrypt(stringifiedPayload);
+	    stringifiedPayload = JSON.stringify(stringifiedPayload);
+	  }
+
+	  return stringifiedPayload;
+	}
+
+	function postPayload(modules, incomingParams) {
+	  return prepareMessagePayload(modules, incomingParams);
+	}
+
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + uuid;
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.usePut = usePut;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.putURL = putURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.postPayload = postPayload;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function usePut() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function putURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/devices/' + uuid;
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+
+	function prepareMessagePayload(modules, messagePayload) {
+	  var crypto = modules.crypto,
+	      config = modules.config;
+
+	  var stringifiedPayload = JSON.stringify(messagePayload);
+
+	  if (config.cipherKey) {
+	    stringifiedPayload = crypto.encrypt(stringifiedPayload);
+	    stringifiedPayload = JSON.stringify(stringifiedPayload);
+	  }
+
+	  return stringifiedPayload;
+	}
+
+	function postPayload(modules, incomingParams) {
+	  return prepareMessagePayload(modules, incomingParams);
+	}
+
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/devices/' + uuid;
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.useDelete = useDelete;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.deleteURL = deleteURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function useDelete() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channels = incomingParams.channels,
+	      channelGroup = incomingParams.channelGroup;
+	  var config = modules.config;
+
+
+	  if (!channelGroup) return 'Missing Channel Group';
+	  if (!channels || channels.length === 0) return 'Missing Channels';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function deleteURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/${config.subscribeKey}/uuid/{$uuid}';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.useDelete = useDelete;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.deleteURL = deleteURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function useDelete() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channels = incomingParams.channels,
+	      channelGroup = incomingParams.channelGroup;
+	  var config = modules.config;
+
+
+	  if (!channelGroup) return 'Missing Channel Group';
+	  if (!channels || channels.length === 0) return 'Missing Channels';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function deleteURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/${config.subscribeKey}/uuid/{$uuid}';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.usePut = usePut;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.putURL = putURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.postPayload = postPayload;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function usePut() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function putURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + uuid + '/devices';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var user = incomingParams.user;
+
+	  var params = {};
+
+	  return params;
+	}
+
+	function prepareMessagePayload(modules, messagePayload) {
+	  var crypto = modules.crypto,
+	      config = modules.config;
+
+	  var stringifiedPayload = JSON.stringify(messagePayload);
+
+	  if (config.cipherKey) {
+	    stringifiedPayload = crypto.encrypt(stringifiedPayload);
+	    stringifiedPayload = JSON.stringify(stringifiedPayload);
+	  }
+
+	  return stringifiedPayload;
+	}
+
+	function postPayload(modules, incomingParams) {
+	  return prepareMessagePayload(modules, incomingParams);
+	}
+
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.useDelete = useDelete;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.deleteURL = deleteURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function useDelete() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function deleteURL(modules, incomingParams) {
+	  var user_uuid = incomingParams.user_uuid,
+	      device_uuid = incomingParams.device_uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + user_uuid + '/devices/' + device_uuid;
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  if (!uuid) return 'Missing UUID';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + uuid + '/devices';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var config = modules.config;
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/channels';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.usePut = usePut;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.putURL = putURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.postPayload = postPayload;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function usePut() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  if (!channel) return 'Missing Channel';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function putURL(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/channels/' + channel;
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+
+	function prepareMessagePayload(modules, messagePayload) {
+	  var crypto = modules.crypto,
+	      config = modules.config;
+
+	  var stringifiedPayload = JSON.stringify(messagePayload);
+
+	  if (config.cipherKey) {
+	    stringifiedPayload = crypto.encrypt(stringifiedPayload);
+	    stringifiedPayload = JSON.stringify(stringifiedPayload);
+	  }
+
+	  return stringifiedPayload;
+	}
+
+	function postPayload(modules, incomingParams) {
+	  return prepareMessagePayload(modules, incomingParams);
+	}
+
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  if (!channel) return 'Missing Channel';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/channels/' + channel;
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.useDelete = useDelete;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.deleteURL = deleteURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function useDelete() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channels = incomingParams.channels,
+	      channelGroup = incomingParams.channelGroup;
+	  var config = modules.config;
+
+
+	  if (!channelGroup) return 'Missing Channel Group';
+	  if (!channels || channels.length === 0) return 'Missing Channels';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function deleteURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/${config.subscribeKey}/uuid/{$uuid}';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.usePut = usePut;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.putURL = putURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.postPayload = postPayload;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function usePut() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function putURL(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/channels/' + channel + '/users';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var user = incomingParams.user;
+
+	  var params = {};
+
+	  return params;
+	}
+
+	function prepareMessagePayload(modules, messagePayload) {
+	  var crypto = modules.crypto,
+	      config = modules.config;
+
+	  var stringifiedPayload = JSON.stringify(messagePayload);
+
+	  if (config.cipherKey) {
+	    stringifiedPayload = crypto.encrypt(stringifiedPayload);
+	    stringifiedPayload = JSON.stringify(stringifiedPayload);
+	  }
+
+	  return stringifiedPayload;
+	}
+
+	function postPayload(modules, incomingParams) {
+	  return prepareMessagePayload(modules, incomingParams);
+	}
+
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.useDelete = useDelete;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.deleteURL = deleteURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function useDelete() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  if (!channel) return 'Missing Channels';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function deleteURL(modules, incomingParams) {
+	  var channel = incomingParams.channel,
+	      uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/channels/' + channel + '/users/' + uuid;
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  if (!channel) return 'Missing channel';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/channels/' + channel + '/users';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  if (!uuid) return 'Missing UUID';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + uuid + '/channels';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.usePut = usePut;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.putURL = putURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.postPayload = postPayload;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function usePut() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function putURL(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/channels/' + channel + '/devices';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var user = incomingParams.user;
+
+	  var params = {};
+
+	  return params;
+	}
+
+	function prepareMessagePayload(modules, messagePayload) {
+	  var crypto = modules.crypto,
+	      config = modules.config;
+
+	  var stringifiedPayload = JSON.stringify(messagePayload);
+
+	  if (config.cipherKey) {
+	    stringifiedPayload = crypto.encrypt(stringifiedPayload);
+	    stringifiedPayload = JSON.stringify(stringifiedPayload);
+	  }
+
+	  return stringifiedPayload;
+	}
+
+	function postPayload(modules, incomingParams) {
+	  return prepareMessagePayload(modules, incomingParams);
+	}
+
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.useDelete = useDelete;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.deleteURL = deleteURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function useDelete() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  if (!channel) return 'Missing Channels';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function deleteURL(modules, incomingParams) {
+	  var channel = incomingParams.channel,
+	      uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/channels/' + channel + '/devices/' + uuid;
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  if (!channel) return 'Missing channel';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var channel = incomingParams.channel;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/channels/' + channel + '/devices';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  if (!uuid) return 'Missing UUID';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/data/sub-key/' + config.subscribeKey + '/devices/' + uuid + '/channels';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2635,7 +4776,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 18 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2710,7 +4851,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 19 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2777,7 +4918,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 20 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2839,7 +4980,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 21 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2908,7 +5049,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 22 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2979,7 +5120,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 23 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3050,7 +5191,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 24 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3117,7 +5258,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 25 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3184,7 +5325,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 26 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3260,7 +5401,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 27 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3325,7 +5466,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 28 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3406,7 +5547,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 29 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3497,7 +5638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 30 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3583,7 +5724,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 31 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3747,7 +5888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 32 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3826,7 +5967,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 33 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3924,7 +6065,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 34 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4063,7 +6204,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 35 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4176,7 +6317,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 36 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4258,7 +6399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 37 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4371,7 +6512,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 38 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4492,7 +6633,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 39 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4581,6 +6722,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return this._standardOrigin;
 	    }
 	  }, {
+	    key: 'PUT',
+	    value: function PUT(params, body, endpoint, callback) {
+	      return this._modules.post(params, body, endpoint, callback);
+	    }
+	  }, {
 	    key: 'POST',
 	    value: function POST(params, body, endpoint, callback) {
 	      return this._modules.post(params, body, endpoint, callback);
@@ -4624,7 +6770,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 40 */
+/* 65 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -4651,7 +6797,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ }),
-/* 41 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4661,9 +6807,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.get = get;
 	exports.post = post;
+	exports.put = put;
 	exports.del = del;
 
-	var _superagent = __webpack_require__(42);
+	var _superagent = __webpack_require__(67);
 
 	var _superagent2 = _interopRequireDefault(_superagent);
 
@@ -4754,7 +6901,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function post(params, body, endpoint, callback) {
-	  var superagentConstruct = _superagent2.default.post(this.getStandardOrigin() + endpoint.url).query(params).send(body);
+	  var superagentConstruct = _superagent2.default.put(this.getStandardOrigin() + endpoint.url).set('Content-Type', 'application/json').query(params).send(body);
+	  return xdr.call(this, superagentConstruct, endpoint, callback);
+	}
+
+	function put(params, body, endpoint, callback) {
+	  var superagentConstruct = _superagent2.default.put(this.getStandardOrigin() + endpoint.url).set('Content-Type', 'application/json').query(params).send(body);
 	  return xdr.call(this, superagentConstruct, endpoint, callback);
 	}
 
@@ -4764,7 +6916,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 42 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
@@ -4781,11 +6933,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  root = this;
 	}
 
-	var Emitter = __webpack_require__(43);
-	var RequestBase = __webpack_require__(44);
-	var isObject = __webpack_require__(45);
-	var ResponseBase = __webpack_require__(46);
-	var Agent = __webpack_require__(48);
+	var Emitter = __webpack_require__(68);
+	var RequestBase = __webpack_require__(69);
+	var isObject = __webpack_require__(70);
+	var ResponseBase = __webpack_require__(71);
+	var Agent = __webpack_require__(73);
 
 	/**
 	 * Noop.
@@ -5690,7 +7842,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 43 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
@@ -5859,7 +8011,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 44 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5867,7 +8019,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * Module of mixed-in functions shared between node and client code
 	 */
-	var isObject = __webpack_require__(45);
+	var isObject = __webpack_require__(70);
 
 	/**
 	 * Expose `RequestBase`.
@@ -6559,7 +8711,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 45 */
+/* 70 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -6580,7 +8732,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 46 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6589,7 +8741,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Module dependencies.
 	 */
 
-	var utils = __webpack_require__(47);
+	var utils = __webpack_require__(72);
 
 	/**
 	 * Expose `ResponseBase`.
@@ -6722,7 +8874,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 47 */
+/* 72 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -6799,7 +8951,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 48 */
+/* 73 */
 /***/ (function(module, exports) {
 
 	function Agent() {

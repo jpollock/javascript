@@ -240,6 +240,14 @@ type ListChannelsResponse = {
 
 //
 
+// Object endpoints
+
+type AddChannelMemberParams = {
+  channel: string,
+  member: Object
+}
+
+
 // push
 
 type ProvisionDeviceArgs = {
@@ -375,6 +383,16 @@ type PublishArguments = {
 
 type ModulesInject = {
   config: Object;
+}
+
+type CreateUuidMetadataParams = {
+  name: string,
+  description: string,
+  profile: Object
+}
+
+type AddUserToChannelParams = {
+  user: string
 }
 
 module.exports = {};

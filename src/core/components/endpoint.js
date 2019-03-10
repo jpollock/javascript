@@ -26,6 +26,10 @@ function createValidationError(message: string): Object {
 function decideURL(endpoint, modules, incomingParams) {
   if (endpoint.usePost && endpoint.usePost(modules, incomingParams)) {
     return endpoint.postURL(modules, incomingParams);
+  } else if (endpoint.usePut && endpoint.usePut(modules, incomingParams)) {
+    return endpoint.putURL(modules, incomingParams);
+  } else if (endpoint.useDelete && endpoint.useDelete(modules, incomingParams)) {
+    return endpoint.deleteURL(modules, incomingParams);
   } else {
     return endpoint.getURL(modules, incomingParams);
   }
@@ -140,12 +144,15 @@ export default function (modules, endpoint, ...args) {
   if (endpoint.usePost && endpoint.usePost(modules, incomingParams)) {
     let payload = endpoint.postPayload(modules, incomingParams);
     callInstance = networking.POST(outgoingParams, payload, networkingParams, onResponse);
+  } else if (endpoint.usePut && endpoint.usePut()) {
+    let payload = endpoint.postPayload(modules, incomingParams);
+    callInstance = networking.PUT(outgoingParams, payload, networkingParams, onResponse);
   } else if (endpoint.useDelete && endpoint.useDelete()) {
     callInstance = networking.DELETE(outgoingParams, networkingParams, onResponse);
   } else {
     callInstance = networking.GET(outgoingParams, networkingParams, onResponse);
   }
-
+  
   if (endpoint.getOperation() === operationConstants.PNSubscribeOperation) {
     return callInstance;
   }

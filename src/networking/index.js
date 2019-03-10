@@ -75,6 +75,10 @@ export default class {
     return this._standardOrigin;
   }
 
+  PUT(params: Object, body: string, endpoint: EndpointDefinition, callback: Function) {
+    return this._modules.post(params, body, endpoint, callback);
+  }
+
   POST(params: Object, body: string, endpoint: EndpointDefinition, callback: Function) {
     return this._modules.post(params, body, endpoint, callback);
   }
