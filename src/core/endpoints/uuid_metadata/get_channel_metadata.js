@@ -40,6 +40,7 @@ export function prepareParams(modules: ModulesInject, incomingParams: CreateUuid
 
   return params;
 }
-export function handleResponse(): Object {
-  return {};
+
+export function handleResponse(modules: ModulesInject, serverResponse: Object): Object {
+  return serverResponse;
 }
