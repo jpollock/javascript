@@ -105,7 +105,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    setup.db = _web2.default;
 	    setup.sdkFamily = 'Web';
-	    setup.networking = new _networking2.default({ del: _webNode.del, get: _webNode.get, post: _webNode.post, sendBeacon: sendBeacon });
+	    setup.networking = new _networking2.default({ del: _webNode.del, get: _webNode.get, post: _webNode.post, put: _webNode.put, sendBeacon: sendBeacon });
 
 	    var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, setup));
 
