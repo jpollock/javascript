@@ -90,7 +90,7 @@ export function get(params: Object, endpoint: EndpointDefinition, callback: Func
 
 export function post(params: Object, body: string, endpoint: EndpointDefinition, callback: Function): superagent {
   let superagentConstruct = superagent
-    .put(this.getStandardOrigin() + endpoint.url) // JEREMY!
+    .post(this.getStandardOrigin() + endpoint.url) // JEREMY!
     .set('Content-Type', 'application/json')
     .query(params)
     .send(body);

@@ -25,7 +25,7 @@ export function deleteURL(modules: ModulesInject, incomingParams: CreateUuidMeta
   let { channel, uuid } = incomingParams;
   let { config } = modules;
 
-  return `/v1/data/sub-key/${config.subscribeKey}/channels/${channel}/users/${uuid}`
+  return `/v1/data/sub-key/${config.subscribeKey}/spaces/${channel}/users/${uuid}`
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {

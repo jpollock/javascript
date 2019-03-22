@@ -25,7 +25,7 @@ export function validateParams(modules: ModulesInject, incomingParams: CreateUui
 export function putURL(modules: ModulesInject, incomingParams: CreateUuidMetadataParams): string {
   let { channel, timetoken } = incomingParams;
   let { config } = modules;
-  return `/v1/data/sub-key/${config.subscribeKey}/channels/${channel}/message/${timetoken}/action`;
+  return `/v1/data/sub-key/${config.subscribeKey}/spaces/${channel}/message/${timetoken}/action`;
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {

@@ -21,7 +21,7 @@ export function getURL(modules: ModulesInject, incomingParams: CreateUuidMetadat
   let { channel } = incomingParams;
   let { config } = modules;
 
-  return `/v1/data/sub-key/${config.subscribeKey}/channels/${channel}`
+  return `/v1/data/sub-key/${config.subscribeKey}/spaces/${channel}`
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {

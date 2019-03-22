@@ -32,7 +32,8 @@ export type NetworkingModules = {
   keepAlive: ?Function,
   sendBeacon: ?Function,
   get: Function,
-  post: Function
+  post: Function,
+  put: Function
 }
 
 export type InternalSetupStruct = {

@@ -27,7 +27,8 @@ import * as removeDeviceFromUserConfig from './endpoints/uuid_metadata/remove_de
 import * as listDevicesForUserConfig from './endpoints/uuid_metadata/list_devices_for_user';
 
 import * as getChannelsDataConfig from './endpoints/uuid_metadata/get_channels_metadata';
-import * as setChannelDataConfig from './endpoints/uuid_metadata/set_channel_metadata';
+import * as addChannelDataConfig from './endpoints/uuid_metadata/add_channel_metadata';
+import * as updateChannelDataConfig from './endpoints/uuid_metadata/update_channel_metadata';
 import * as getChannelDataConfig from './endpoints/uuid_metadata/get_channel_metadata';
 import * as deleteChannelDataConfig from './endpoints/uuid_metadata/delete_channel_metadata';
 import * as addUserToChannelConfig from './endpoints/uuid_metadata/add_user_to_channel';
@@ -218,18 +219,19 @@ export default class {
     this.getChannelGroupMetadata = endpointCreator.default.bind(this, modules, getChannelGroupMetadataConfig);
     this.deleteChannelGroupMetadata = endpointCreator.default.bind(this, modules, deleteChannelGroupMetadataConfig);
     */
-    this.addUserToChannel = endpointCreator.bind(this, modules, addUserToChannelConfig);
-    this.removeUserFromChannel = endpointCreator.bind(this, modules, removeUserFromChannelConfig);
-    this.listUsersInChannel = endpointCreator.bind(this, modules, listUsersInChannelConfig);
-    this.listChannelsForUser = endpointCreator.bind(this, modules, listChannelsForUserConfig);
-    this.addDeviceToChannel = endpointCreator.bind(this, modules, addDeviceToChannelConfig);
-    this.removeDeviceFromChannel = endpointCreator.bind(this, modules, removeDeviceFromChannelConfig);
-    this.listDeviceInChannel = endpointCreator.bind(this, modules, listDevicesInChannelConfig);
+    this.addUserToVirtualSpace = endpointCreator.bind(this, modules, addUserToChannelConfig);
+    this.removeUserFromVirtualSpace = endpointCreator.bind(this, modules, removeUserFromChannelConfig);
+    this.listUsersInVirtualSpace = endpointCreator.bind(this, modules, listUsersInChannelConfig);
+    this.listVirtualSpacesForUser = endpointCreator.bind(this, modules, listChannelsForUserConfig);
+    this.addDeviceToVirtualSpace = endpointCreator.bind(this, modules, addDeviceToChannelConfig);
+    this.removeDeviceFromVirtualSpace = endpointCreator.bind(this, modules, removeDeviceFromChannelConfig);
+    this.listDeviceInVirtualSpace = endpointCreator.bind(this, modules, listDevicesInChannelConfig);
     this.listDevicesForUser = endpointCreator.bind(this, modules, listChannelsForDeviceConfig);
-    this.getChannelsData = endpointCreator.bind(this, modules, getChannelsDataConfig);
-    this.setChannelData = endpointCreator.bind(this, modules, setChannelDataConfig);
-    this.getChannelData = endpointCreator.bind(this, modules, getChannelDataConfig);
-    this.deleteChannelData = endpointCreator.bind(this, modules, deleteChannelDataConfig);
+    this.getVirtualSpaces = endpointCreator.bind(this, modules, getChannelsDataConfig);
+    this.addVirtualSpace = endpointCreator.bind(this, modules, addChannelDataConfig);
+    this.updateVirtualSpace = endpointCreator.bind(this, modules, updateChannelDataConfig);
+    this.getVirtualSpace = endpointCreator.bind(this, modules, getChannelDataConfig);
+    this.deleteVirtualSpace = endpointCreator.bind(this, modules, deleteChannelDataConfig);
     
     this.fire = (args, callback) => {
       args.replicate = false;

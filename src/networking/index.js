@@ -76,7 +76,7 @@ export default class {
   }
 
   PUT(params: Object, body: string, endpoint: EndpointDefinition, callback: Function) {
-    return this._modules.post(params, body, endpoint, callback);
+    return this._modules.put(params, body, endpoint, callback);
   }
 
   POST(params: Object, body: string, endpoint: EndpointDefinition, callback: Function) {

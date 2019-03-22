@@ -22,7 +22,7 @@ export function putURL(modules: ModulesInject, incomingParams: CreateUuidMetadat
   let { channel } = incomingParams;
   let { config } = modules;
 
-  return `/v1/data/sub-key/${config.subscribeKey}/channels/${channel}/users`;
+  return `/v1/data/sub-key/${config.subscribeKey}/spaces/${channel}/users`;
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {
