@@ -23,7 +23,7 @@ export function deleteURL(modules: ModulesInject, incomingParams: CreateUuidMeta
   let { user_uuid, device_uuid } = incomingParams;
   let { config } = modules;
 
-  return `/v1/data/sub-key/${config.subscribeKey}/users/${user_uuid}/devices/${device_uuid}`
+  return `/v1/objects/${config.subscribeKey}/users/${user_uuid}/devices/${device_uuid}`
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {

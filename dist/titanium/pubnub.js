@@ -2806,7 +2806,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      timetoken = incomingParams.timetoken;
 	  var config = modules.config;
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces/' + channel + '/message/' + timetoken + '/action';
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel + '/message/' + timetoken + '/action';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -2901,7 +2901,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/${config.subscribeKey}/uuid/{$uuid}';
+	  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -2980,7 +2980,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/${config.subscribeKey}/uuid/{$uuid}';
+	  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3056,7 +3056,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + uuid;
+	  return '/v1/objects/' + config.subscribeKey + '/users/' + uuid;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3145,7 +3145,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + uuid;
+	  return '/v1/objects/' + config.subscribeKey + '/users/' + uuid;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3221,7 +3221,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/devices/' + uuid;
+	  return '/v1/objects/' + config.subscribeKey + '/devices/' + uuid;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3310,7 +3310,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/devices/' + uuid;
+	  return '/v1/objects/' + config.subscribeKey + '/devices/' + uuid;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3389,7 +3389,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/${config.subscribeKey}/uuid/{$uuid}';
+	  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3468,7 +3468,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/${config.subscribeKey}/uuid/{$uuid}';
+	  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3544,7 +3544,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + uuid + '/devices';
+	  return '/v1/objects/' + config.subscribeKey + '/users/' + uuid + '/devices';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3638,7 +3638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + user_uuid + '/devices/' + device_uuid;
+	  return '/v1/objects/' + config.subscribeKey + '/users/' + user_uuid + '/devices/' + device_uuid;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3710,7 +3710,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + uuid + '/devices';
+	  return '/v1/objects/' + config.subscribeKey + '/users/' + uuid + '/devices';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3778,7 +3778,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces';
+	  return '/v1/objects/' + config.subscribeKey + '/spaces';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3853,7 +3853,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces';
+	  return '/v1/objects/' + config.subscribeKey + '/spaces';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3950,7 +3950,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces/' + channel;
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4041,7 +4041,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces/' + channel;
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4121,7 +4121,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/${config.subscribeKey}/uuid/{$uuid}';
+	  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4197,7 +4197,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces/' + channel + '/users';
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel + '/users';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4293,7 +4293,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces/' + channel + '/users/' + uuid;
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel + '/users/' + uuid;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4365,7 +4365,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces/' + channel + '/users';
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel + '/users';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4437,7 +4437,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/users/' + uuid + '/spaces';
+	  return '/v1/objects/' + config.subscribeKey + '/users/' + uuid + '/spaces';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4513,7 +4513,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces/' + channel + '/devices';
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel + '/devices';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4609,7 +4609,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces/' + channel + '/devices/' + uuid;
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel + '/devices/' + uuid;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4681,7 +4681,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/spaces/' + channel + '/devices';
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel + '/devices';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4753,7 +4753,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/data/sub-key/' + config.subscribeKey + '/devices/' + uuid + '/spaces';
+	  return '/v1/objects/' + config.subscribeKey + '/devices/' + uuid + '/spaces';
 	}
 
 	function getRequestTimeout(_ref) {

@@ -17,7 +17,7 @@ export function validateParams(modules: ModulesInject, incomingParams: CreateUui
 export function getURL(modules: ModulesInject, incomingParams: CreateUuidMetadataParams): string {
   let { config } = modules;
 
-  return `/v1/data/sub-key/${config.subscribeKey}/spaces`
+  return `/v1/objects/${config.subscribeKey}/spaces`
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {
