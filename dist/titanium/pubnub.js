@@ -3014,10 +3014,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.usePut = usePut;
+	exports.usePost = usePost;
 	exports.getOperation = getOperation;
 	exports.validateParams = validateParams;
-	exports.putURL = putURL;
+	exports.postURL = postURL;
 	exports.getRequestTimeout = getRequestTimeout;
 	exports.isAuthSupported = isAuthSupported;
 	exports.prepareParams = prepareParams;
@@ -3036,7 +3036,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function usePut() {
+	function usePost() {
 	  return true;
 	}
 
@@ -3051,7 +3051,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!config.subscribeKey) return 'Missing Subscribe Key';
 	}
 
-	function putURL(modules, incomingParams) {
+	function postURL(modules, incomingParams) {
 	  var uuid = incomingParams.uuid;
 	  var config = modules.config;
 
