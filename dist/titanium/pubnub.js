@@ -2562,6 +2562,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  } else if (endpoint.usePut && endpoint.usePut()) {
 	    var _payload = endpoint.postPayload(modules, incomingParams);
 	    callInstance = networking.PUT(outgoingParams, _payload, networkingParams, onResponse);
+	  } else if (endpoint.usePatch && endpoint.usePatch()) {
+	    var _payload2 = endpoint.postPayload(modules, incomingParams);
+	    callInstance = networking.PATCH(outgoingParams, _payload2, networkingParams, onResponse);
 	  } else if (endpoint.useDelete && endpoint.useDelete()) {
 	    callInstance = networking.DELETE(outgoingParams, networkingParams, onResponse);
 	  } else {
@@ -2635,6 +2638,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return endpoint.postURL(modules, incomingParams);
 	  } else if (endpoint.usePut && endpoint.usePut(modules, incomingParams)) {
 	    return endpoint.putURL(modules, incomingParams);
+	  } else if (endpoint.usePatch && endpoint.usePatch(modules, incomingParams)) {
+	    return endpoint.patchURL(modules, incomingParams);
 	  } else if (endpoint.useDelete && endpoint.useDelete(modules, incomingParams)) {
 	    return endpoint.deleteURL(modules, incomingParams);
 	  } else {
@@ -4040,7 +4045,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var channel = incomingParams.channel;
 	  var config = modules.config;
 
-
+	  console.log('/v1/objects/' + config.subscribeKey + '/spaces/' + channel);
 	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel;
 	}
 
@@ -4155,10 +4160,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.usePut = usePut;
+	exports.usePatch = usePatch;
 	exports.getOperation = getOperation;
 	exports.validateParams = validateParams;
-	exports.putURL = putURL;
+	exports.patchURL = patchURL;
 	exports.getRequestTimeout = getRequestTimeout;
 	exports.isAuthSupported = isAuthSupported;
 	exports.prepareParams = prepareParams;
@@ -4177,7 +4182,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function usePut() {
+	function usePatch() {
 	  return true;
 	}
 
@@ -4192,7 +4197,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!config.subscribeKey) return 'Missing Subscribe Key';
 	}
 
-	function putURL(modules, incomingParams) {
+	function patchURL(modules, incomingParams) {
 	  var channel = incomingParams.channel;
 	  var config = modules.config;
 
@@ -6798,6 +6803,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'getStandardOrigin',
 	    value: function getStandardOrigin() {
 	      return this._standardOrigin;
+	    }
+	  }, {
+	    key: 'PATCH',
+	    value: function PATCH(params, body, endpoint, callback) {
+	      return this._modules.patch(params, body, endpoint, callback);
 	    }
 	  }, {
 	    key: 'PUT',

@@ -4,7 +4,7 @@ import { AddChannelParams, ModulesInject } from '../../flow_interfaces';
 import operationConstants from '../../constants/operations';
 import utils from '../../utils';
 
-export function usePut(): boolean {
+export function usePatch(): boolean {
   return true;
 }
 
@@ -18,7 +18,7 @@ export function validateParams(modules: ModulesInject, incomingParams: CreateUui
   if (!config.subscribeKey) return 'Missing Subscribe Key';
 }
 
-export function putURL(modules: ModulesInject, incomingParams: CreateUuidMetadataParams): string {
+export function patchURL(modules: ModulesInject, incomingParams: CreateUuidMetadataParams): string {
   let { channel } = incomingParams;
   let { config } = modules;
 

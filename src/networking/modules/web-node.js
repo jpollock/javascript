@@ -106,6 +106,15 @@ export function put(params: Object, body: string, endpoint: EndpointDefinition, 
   return xdr.call(this, superagentConstruct, endpoint, callback);
 }
 
+export function patch(params: Object, body: string, endpoint: EndpointDefinition, callback: Function): superagent {
+  let superagentConstruct = superagent
+    .patch(this.getStandardOrigin() + endpoint.url)
+    .set('Content-Type', 'application/json')
+    .query(params)
+    .send(body);
+  return xdr.call(this, superagentConstruct, endpoint, callback);
+}
+
 export function del(params: Object, endpoint: EndpointDefinition, callback: Function): superagent {
   let superagentConstruct = superagent
     .delete(this.getStandardOrigin() + endpoint.url)

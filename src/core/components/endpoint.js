@@ -28,6 +28,8 @@ function decideURL(endpoint, modules, incomingParams) {
     return endpoint.postURL(modules, incomingParams);
   } else if (endpoint.usePut && endpoint.usePut(modules, incomingParams)) {
     return endpoint.putURL(modules, incomingParams);
+  } else if (endpoint.usePatch && endpoint.usePatch(modules, incomingParams)) {
+    return endpoint.patchURL(modules, incomingParams);
   } else if (endpoint.useDelete && endpoint.useDelete(modules, incomingParams)) {
     return endpoint.deleteURL(modules, incomingParams);
   } else {
@@ -147,6 +149,9 @@ export default function (modules, endpoint, ...args) {
   } else if (endpoint.usePut && endpoint.usePut()) {
     let payload = endpoint.postPayload(modules, incomingParams);
     callInstance = networking.PUT(outgoingParams, payload, networkingParams, onResponse);
+  } else if (endpoint.usePatch && endpoint.usePatch()) {
+    let payload = endpoint.postPayload(modules, incomingParams);
+    callInstance = networking.PATCH(outgoingParams, payload, networkingParams, onResponse);
   } else if (endpoint.useDelete && endpoint.useDelete()) {
     callInstance = networking.DELETE(outgoingParams, networkingParams, onResponse);
   } else {

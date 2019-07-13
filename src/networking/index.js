@@ -75,6 +75,11 @@ export default class {
     return this._standardOrigin;
   }
 
+  PATCH(params: Object, body: string, endpoint: EndpointDefinition, callback: Function) {
+    return this._modules.patch(params, body, endpoint, callback);
+  }
+
+
   PUT(params: Object, body: string, endpoint: EndpointDefinition, callback: Function) {
     return this._modules.put(params, body, endpoint, callback);
   }
