@@ -22,7 +22,7 @@ export function postURL(modules: ModulesInject, incomingParams: CreateUuidMetada
   let { uuid } = incomingParams;
   let { config } = modules;
 
-  return `/v1/objects/${config.subscribeKey}/users/${uuid}`;
+  return `/v1/objects/${config.subscribeKey}/users`;
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {

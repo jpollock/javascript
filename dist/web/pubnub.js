@@ -3078,7 +3078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/objects/' + config.subscribeKey + '/users/' + uuid;
+	  return '/v1/objects/' + config.subscribeKey + '/users';
 	}
 
 	function getRequestTimeout(_ref) {
