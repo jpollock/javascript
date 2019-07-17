@@ -430,6 +430,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.removeDeviceFromUser = _endpoint2.default.bind(this, modules, removeDeviceFromUserConfig);
 	    this.listDevicesForUser = _endpoint2.default.bind(this, modules, listDevicesForUserConfig);
 
+		//PubNub Objects
 	    this.addUserToVirtualSpace = _endpoint2.default.bind(this, modules, addUserToChannelConfig);
 	    this.removeUserFromVirtualSpace = _endpoint2.default.bind(this, modules, removeUserFromChannelConfig);
 	    this.listUsersInVirtualSpace = _endpoint2.default.bind(this, modules, listUsersInChannelConfig);
