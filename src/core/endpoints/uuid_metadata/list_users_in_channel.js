@@ -17,10 +17,10 @@ export function validateParams(modules: ModulesInject, incomingParams: CreateUui
 }
 
 export function getURL(modules: ModulesInject, incomingParams: CreateUuidMetadataParams): string {
-  let { channel } = incomingParams;
+  let { channel, include } = incomingParams;
   let { config } = modules;
 
-  return `/v1/objects/${config.subscribeKey}/spaces/${channel}/users`
+  return `/v1/objects/${config.subscribeKey}/spaces/${channel}/users?include=${include}`
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {
