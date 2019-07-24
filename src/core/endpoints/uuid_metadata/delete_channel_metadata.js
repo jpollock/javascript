@@ -14,11 +14,10 @@ export function getOperation(): string {
 }
 
 export function validateParams(modules: ModulesInject, incomingParams: CreateUuidMetadataParams) {
-  let { channels, channelGroup } = incomingParams;
+  let { channel } = incomingParams;
   let { config } = modules;
 
-  if (!channelGroup) return 'Missing Channel Group';
-  if (!channels || channels.length === 0) return 'Missing Channels';
+  if (!channel) return 'Missing Channel';
   if (!config.subscribeKey) return 'Missing Subscribe Key';
 }
 
@@ -26,7 +25,7 @@ export function deleteURL(modules: ModulesInject, incomingParams: CreateUuidMeta
   let { uuid } = incomingParams;
   let { config } = modules;
 
-  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}'
+  return `/v1/objects/${config.subscribeKey}/spaces/${channel}`;
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {

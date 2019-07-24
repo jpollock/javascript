@@ -20,8 +20,8 @@ export function validateParams(modules: ModulesInject, incomingParams: CreateUui
 export function getURL(modules: ModulesInject, incomingParams: CreateUuidMetadataParams): string {
   let { channel } = incomingParams;
   let { config } = modules;
-  console.log(`/v1/objects/${config.subscribeKey}/spaces/${channel}`)
-  return `/v1/objects/${config.subscribeKey}/spaces/${channel}`
+  console.log(`/v1/objects/${config.subscribeKey}/spaces/${channel}`);
+  return `/v1/objects/${config.subscribeKey}/spaces/${channel}`;
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {
