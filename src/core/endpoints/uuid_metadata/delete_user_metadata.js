@@ -14,16 +14,18 @@ export function getOperation(): string {
 }
 
 export function validateParams(modules: ModulesInject, incomingParams: CreateUuidMetadataParams) {
+  let { uuid } = incomingParams;
   let { config } = modules;
 
+  if (!uuid) return 'Missing UUID';
   if (!config.subscribeKey) return 'Missing Subscribe Key';
 }
 
 export function deleteURL(modules: ModulesInject, incomingParams: CreateUuidMetadataParams): string {
   let { uuid } = incomingParams;
   let { config } = modules;
-
-  return `/v1/objects/${config.subscribeKey}/users/{$uuid}`;
+  
+  return `/v1/objects/${config.subscribeKey}/users/${uuid}`;
 }
 
 export function getRequestTimeout({ config }: ModulesInject): number {

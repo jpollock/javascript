@@ -16,6 +16,7 @@ import * as deleteMessageMetadataConfig from './endpoints/uuid_metadata/delete_m
 /* user, device, and channel data */
 import * as setUserDataConfig from './endpoints/uuid_metadata/set_user_metadata';
 import * as getUserDataConfig from './endpoints/uuid_metadata/get_user_metadata';
+import * as getUsersDataConfig from './endpoints/uuid_metadata/get_users_metadata';
 import * as setDeviceDataConfig from './endpoints/uuid_metadata/set_device_metadata';
 import * as getDeviceDataConfig from './endpoints/uuid_metadata/get_device_metadata';
 import * as deleteUserDataConfig from './endpoints/uuid_metadata/delete_user_metadata';
@@ -203,6 +204,7 @@ export default class {
     this.deleteMessageMetadata = endpointCreator.bind(this, modules, deleteMessageMetadataConfig);
     this.setUserData = endpointCreator.bind(this, modules, setUserDataConfig);
     this.getUserData = endpointCreator.bind(this, modules, getUserDataConfig);
+    this.getUsersData = endpointCreator.bind(this, modules, getUsersDataConfig);
     this.deleteUserData = endpointCreator.bind(this, modules, deleteUserDataConfig);
     this.setDeviceData = endpointCreator.bind(this, modules, setDeviceDataConfig);
     this.getDeviceData = endpointCreator.bind(this, modules, getDeviceDataConfig);

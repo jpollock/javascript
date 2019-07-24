@@ -65,15 +65,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _pubnubCommon2 = _interopRequireDefault(_pubnubCommon);
 
-	var _networking = __webpack_require__(65);
+	var _networking = __webpack_require__(66);
 
 	var _networking2 = _interopRequireDefault(_networking);
 
-	var _web = __webpack_require__(66);
+	var _web = __webpack_require__(67);
 
 	var _web2 = _interopRequireDefault(_web);
 
-	var _webNode = __webpack_require__(67);
+	var _webNode = __webpack_require__(68);
 
 	var _flow_interfaces = __webpack_require__(5);
 
@@ -183,167 +183,171 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var getUserDataConfig = _interopRequireWildcard(_get_user_metadata);
 
-	var _set_device_metadata = __webpack_require__(23);
+	var _get_users_metadata = __webpack_require__(23);
+
+	var getUsersDataConfig = _interopRequireWildcard(_get_users_metadata);
+
+	var _set_device_metadata = __webpack_require__(24);
 
 	var setDeviceDataConfig = _interopRequireWildcard(_set_device_metadata);
 
-	var _get_device_metadata = __webpack_require__(24);
+	var _get_device_metadata = __webpack_require__(25);
 
 	var getDeviceDataConfig = _interopRequireWildcard(_get_device_metadata);
 
-	var _delete_user_metadata = __webpack_require__(25);
+	var _delete_user_metadata = __webpack_require__(26);
 
 	var deleteUserDataConfig = _interopRequireWildcard(_delete_user_metadata);
 
-	var _delete_device_metadata = __webpack_require__(26);
+	var _delete_device_metadata = __webpack_require__(27);
 
 	var deleteDeviceDataConfig = _interopRequireWildcard(_delete_device_metadata);
 
-	var _add_device_to_user = __webpack_require__(27);
+	var _add_device_to_user = __webpack_require__(28);
 
 	var addDeviceToUserConfig = _interopRequireWildcard(_add_device_to_user);
 
-	var _remove_device_from_user = __webpack_require__(28);
+	var _remove_device_from_user = __webpack_require__(29);
 
 	var removeDeviceFromUserConfig = _interopRequireWildcard(_remove_device_from_user);
 
-	var _list_devices_for_user = __webpack_require__(29);
+	var _list_devices_for_user = __webpack_require__(30);
 
 	var listDevicesForUserConfig = _interopRequireWildcard(_list_devices_for_user);
 
-	var _get_channels_metadata = __webpack_require__(30);
+	var _get_channels_metadata = __webpack_require__(31);
 
 	var getChannelsDataConfig = _interopRequireWildcard(_get_channels_metadata);
 
-	var _add_channel_metadata = __webpack_require__(31);
+	var _add_channel_metadata = __webpack_require__(32);
 
 	var addChannelDataConfig = _interopRequireWildcard(_add_channel_metadata);
 
-	var _update_channel_metadata = __webpack_require__(32);
+	var _update_channel_metadata = __webpack_require__(33);
 
 	var updateChannelDataConfig = _interopRequireWildcard(_update_channel_metadata);
 
-	var _get_channel_metadata = __webpack_require__(33);
+	var _get_channel_metadata = __webpack_require__(34);
 
 	var getChannelDataConfig = _interopRequireWildcard(_get_channel_metadata);
 
-	var _delete_channel_metadata = __webpack_require__(34);
+	var _delete_channel_metadata = __webpack_require__(35);
 
 	var deleteChannelDataConfig = _interopRequireWildcard(_delete_channel_metadata);
 
-	var _add_user_to_channel = __webpack_require__(35);
+	var _add_user_to_channel = __webpack_require__(36);
 
 	var addUserToChannelConfig = _interopRequireWildcard(_add_user_to_channel);
 
-	var _remove_user_from_channel = __webpack_require__(36);
+	var _remove_user_from_channel = __webpack_require__(37);
 
 	var removeUserFromChannelConfig = _interopRequireWildcard(_remove_user_from_channel);
 
-	var _list_users_in_channel = __webpack_require__(37);
+	var _list_users_in_channel = __webpack_require__(38);
 
 	var listUsersInChannelConfig = _interopRequireWildcard(_list_users_in_channel);
 
-	var _list_channels_for_user = __webpack_require__(38);
+	var _list_channels_for_user = __webpack_require__(39);
 
 	var listChannelsForUserConfig = _interopRequireWildcard(_list_channels_for_user);
 
-	var _add_device_to_channel = __webpack_require__(39);
+	var _add_device_to_channel = __webpack_require__(40);
 
 	var addDeviceToChannelConfig = _interopRequireWildcard(_add_device_to_channel);
 
-	var _remove_device_from_channel = __webpack_require__(40);
+	var _remove_device_from_channel = __webpack_require__(41);
 
 	var removeDeviceFromChannelConfig = _interopRequireWildcard(_remove_device_from_channel);
 
-	var _list_devices_in_channel = __webpack_require__(41);
+	var _list_devices_in_channel = __webpack_require__(42);
 
 	var listDevicesInChannelConfig = _interopRequireWildcard(_list_devices_in_channel);
 
-	var _list_channels_for_device = __webpack_require__(42);
+	var _list_channels_for_device = __webpack_require__(43);
 
 	var listChannelsForDeviceConfig = _interopRequireWildcard(_list_channels_for_device);
 
-	var _add_channels = __webpack_require__(43);
+	var _add_channels = __webpack_require__(44);
 
 	var addChannelsChannelGroupConfig = _interopRequireWildcard(_add_channels);
 
-	var _remove_channels = __webpack_require__(44);
+	var _remove_channels = __webpack_require__(45);
 
 	var removeChannelsChannelGroupConfig = _interopRequireWildcard(_remove_channels);
 
-	var _delete_group = __webpack_require__(45);
+	var _delete_group = __webpack_require__(46);
 
 	var deleteChannelGroupConfig = _interopRequireWildcard(_delete_group);
 
-	var _list_groups = __webpack_require__(46);
+	var _list_groups = __webpack_require__(47);
 
 	var listChannelGroupsConfig = _interopRequireWildcard(_list_groups);
 
-	var _list_channels = __webpack_require__(47);
+	var _list_channels = __webpack_require__(48);
 
 	var listChannelsInChannelGroupConfig = _interopRequireWildcard(_list_channels);
 
-	var _add_push_channels = __webpack_require__(48);
+	var _add_push_channels = __webpack_require__(49);
 
 	var addPushChannelsConfig = _interopRequireWildcard(_add_push_channels);
 
-	var _remove_push_channels = __webpack_require__(49);
+	var _remove_push_channels = __webpack_require__(50);
 
 	var removePushChannelsConfig = _interopRequireWildcard(_remove_push_channels);
 
-	var _list_push_channels = __webpack_require__(50);
+	var _list_push_channels = __webpack_require__(51);
 
 	var listPushChannelsConfig = _interopRequireWildcard(_list_push_channels);
 
-	var _remove_device = __webpack_require__(51);
+	var _remove_device = __webpack_require__(52);
 
 	var removeDevicePushConfig = _interopRequireWildcard(_remove_device);
 
-	var _leave = __webpack_require__(52);
+	var _leave = __webpack_require__(53);
 
 	var presenceLeaveEndpointConfig = _interopRequireWildcard(_leave);
 
-	var _where_now = __webpack_require__(53);
+	var _where_now = __webpack_require__(54);
 
 	var presenceWhereNowEndpointConfig = _interopRequireWildcard(_where_now);
 
-	var _heartbeat = __webpack_require__(54);
+	var _heartbeat = __webpack_require__(55);
 
 	var presenceHeartbeatEndpointConfig = _interopRequireWildcard(_heartbeat);
 
-	var _get_state = __webpack_require__(55);
+	var _get_state = __webpack_require__(56);
 
 	var presenceGetStateConfig = _interopRequireWildcard(_get_state);
 
-	var _set_state = __webpack_require__(56);
+	var _set_state = __webpack_require__(57);
 
 	var presenceSetStateConfig = _interopRequireWildcard(_set_state);
 
-	var _here_now = __webpack_require__(57);
+	var _here_now = __webpack_require__(58);
 
 	var presenceHereNowConfig = _interopRequireWildcard(_here_now);
 
-	var _audit = __webpack_require__(58);
+	var _audit = __webpack_require__(59);
 
 	var auditEndpointConfig = _interopRequireWildcard(_audit);
 
-	var _grant = __webpack_require__(59);
+	var _grant = __webpack_require__(60);
 
 	var grantEndpointConfig = _interopRequireWildcard(_grant);
 
-	var _publish = __webpack_require__(60);
+	var _publish = __webpack_require__(61);
 
 	var publishEndpointConfig = _interopRequireWildcard(_publish);
 
-	var _get_history = __webpack_require__(61);
+	var _get_history = __webpack_require__(62);
 
 	var historyEndpointConfig = _interopRequireWildcard(_get_history);
 
-	var _delete_messages = __webpack_require__(62);
+	var _delete_messages = __webpack_require__(63);
 
 	var deleteMessagesEndpointConfig = _interopRequireWildcard(_delete_messages);
 
-	var _fetch_messages = __webpack_require__(63);
+	var _fetch_messages = __webpack_require__(64);
 
 	var fetchMessagesEndpointConfig = _interopRequireWildcard(_fetch_messages);
 
@@ -351,7 +355,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var timeEndpointConfig = _interopRequireWildcard(_time);
 
-	var _subscribe = __webpack_require__(64);
+	var _subscribe = __webpack_require__(65);
 
 	var subscribeEndpointConfig = _interopRequireWildcard(_subscribe);
 
@@ -444,6 +448,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.deleteMessageMetadata = _endpoint2.default.bind(this, modules, deleteMessageMetadataConfig);
 	    this.setUserData = _endpoint2.default.bind(this, modules, setUserDataConfig);
 	    this.getUserData = _endpoint2.default.bind(this, modules, getUserDataConfig);
+	    this.getUsersData = _endpoint2.default.bind(this, modules, getUsersDataConfig);
 	    this.deleteUserData = _endpoint2.default.bind(this, modules, deleteUserDataConfig);
 	    this.setDeviceData = _endpoint2.default.bind(this, modules, setDeviceDataConfig);
 	    this.getDeviceData = _endpoint2.default.bind(this, modules, getDeviceDataConfig);
@@ -2928,7 +2933,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}';
+	  return '/v1/objects/${config.subscribeKey}/user/{$uuid}';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3007,7 +3012,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}';
+	  return '/v1/objects/' + config.subscribeKey + '/uuid/{$uuid}';
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3206,6 +3211,75 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.getURL = getURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function getURL(modules, incomingParams) {
+	  var config = modules.config;
+
+
+	  return '/v1/objects/' + config.subscribeKey + '/users';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse(modules, serverResponse) {
+	  return serverResponse;
+	}
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	exports.usePut = usePut;
 	exports.getOperation = getOperation;
 	exports.validateParams = validateParams;
@@ -3293,7 +3367,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3363,85 +3437,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.useDelete = useDelete;
-	exports.getOperation = getOperation;
-	exports.validateParams = validateParams;
-	exports.deleteURL = deleteURL;
-	exports.getRequestTimeout = getRequestTimeout;
-	exports.isAuthSupported = isAuthSupported;
-	exports.prepareParams = prepareParams;
-	exports.handleResponse = handleResponse;
-
-	var _flow_interfaces = __webpack_require__(5);
-
-	var _operations = __webpack_require__(13);
-
-	var _operations2 = _interopRequireDefault(_operations);
-
-	var _utils = __webpack_require__(15);
-
-	var _utils2 = _interopRequireDefault(_utils);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function useDelete() {
-	  return true;
-	}
-
-	function getOperation() {
-	  return _operations2.default.PNUuidMetadataCreate;
-	}
-
-	function validateParams(modules, incomingParams) {
-	  var channels = incomingParams.channels,
-	      channelGroup = incomingParams.channelGroup;
-	  var config = modules.config;
-
-
-	  if (!channelGroup) return 'Missing Channel Group';
-	  if (!channels || channels.length === 0) return 'Missing Channels';
-	  if (!config.subscribeKey) return 'Missing Subscribe Key';
-	}
-
-	function deleteURL(modules, incomingParams) {
-	  var uuid = incomingParams.uuid;
-	  var config = modules.config;
-
-
-	  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}';
-	}
-
-	function getRequestTimeout(_ref) {
-	  var config = _ref.config;
-
-	  return config.getTransactionTimeout();
-	}
-
-	function isAuthSupported() {
-	  return true;
-	}
-
-	function prepareParams(modules, incomingParams) {
-	  var name = incomingParams.name,
-	      description = incomingParams.description;
-
-	  var params = {};
-
-	  return params;
-	}
-	function handleResponse() {
-	  return {};
-	}
-
-/***/ }),
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3480,13 +3475,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function validateParams(modules, incomingParams) {
-	  var channels = incomingParams.channels,
-	      channelGroup = incomingParams.channelGroup;
+	  var uuid = incomingParams.uuid;
 	  var config = modules.config;
 
 
-	  if (!channelGroup) return 'Missing Channel Group';
-	  if (!channels || channels.length === 0) return 'Missing Channels';
+	  if (!uuid) return 'Missing UUID';
 	  if (!config.subscribeKey) return 'Missing Subscribe Key';
 	}
 
@@ -3495,7 +3488,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}';
+	  return '/v1/objects/' + config.subscribeKey + '/users/' + uuid;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -3522,6 +3515,85 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 /* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.useDelete = useDelete;
+	exports.getOperation = getOperation;
+	exports.validateParams = validateParams;
+	exports.deleteURL = deleteURL;
+	exports.getRequestTimeout = getRequestTimeout;
+	exports.isAuthSupported = isAuthSupported;
+	exports.prepareParams = prepareParams;
+	exports.handleResponse = handleResponse;
+
+	var _flow_interfaces = __webpack_require__(5);
+
+	var _operations = __webpack_require__(13);
+
+	var _operations2 = _interopRequireDefault(_operations);
+
+	var _utils = __webpack_require__(15);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function useDelete() {
+	  return true;
+	}
+
+	function getOperation() {
+	  return _operations2.default.PNUuidMetadataCreate;
+	}
+
+	function validateParams(modules, incomingParams) {
+	  var channels = incomingParams.channels,
+	      channelGroup = incomingParams.channelGroup;
+	  var config = modules.config;
+
+
+	  if (!channelGroup) return 'Missing Channel Group';
+	  if (!channels || channels.length === 0) return 'Missing Channels';
+	  if (!config.subscribeKey) return 'Missing Subscribe Key';
+	}
+
+	function deleteURL(modules, incomingParams) {
+	  var uuid = incomingParams.uuid;
+	  var config = modules.config;
+
+
+	  return '/v1/objects/' + config.subscribeKey + '/uuid/{$uuid}';
+	}
+
+	function getRequestTimeout(_ref) {
+	  var config = _ref.config;
+
+	  return config.getTransactionTimeout();
+	}
+
+	function isAuthSupported() {
+	  return true;
+	}
+
+	function prepareParams(modules, incomingParams) {
+	  var name = incomingParams.name,
+	      description = incomingParams.description;
+
+	  var params = {};
+
+	  return params;
+	}
+	function handleResponse() {
+	  return {};
+	}
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3615,7 +3687,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3691,7 +3763,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3763,7 +3835,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3831,7 +3903,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3925,7 +3997,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4022,7 +4094,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4095,7 +4167,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4133,13 +4205,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function validateParams(modules, incomingParams) {
-	  var channels = incomingParams.channels,
-	      channelGroup = incomingParams.channelGroup;
+	  var channel = incomingParams.channel;
 	  var config = modules.config;
 
 
-	  if (!channelGroup) return 'Missing Channel Group';
-	  if (!channels || channels.length === 0) return 'Missing Channels';
+	  if (!channel) return 'Missing Channel';
 	  if (!config.subscribeKey) return 'Missing Subscribe Key';
 	}
 
@@ -4148,7 +4218,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var config = modules.config;
 
 
-	  return '/v1/objects/${config.subscribeKey}/uuid/{$uuid}';
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4174,7 +4244,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4268,7 +4338,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4346,7 +4416,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4388,11 +4458,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function getURL(modules, incomingParams) {
-	  var channel = incomingParams.channel;
+	  var channel = incomingParams.channel,
+	      include = incomingParams.include;
 	  var config = modules.config;
 
 
-	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel + '/users';
+	  return '/v1/objects/' + config.subscribeKey + '/spaces/' + channel + '/users?include=' + include;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4418,7 +4489,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4460,11 +4531,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function getURL(modules, incomingParams) {
-	  var uuid = incomingParams.uuid;
+	  var uuid = incomingParams.uuid,
+	      include = incomingParams.include;
 	  var config = modules.config;
 
 
-	  return '/v1/objects/' + config.subscribeKey + '/users/' + uuid + '/spaces';
+	  return '/v1/objects/' + config.subscribeKey + '/users/' + uuid + '/spaces?include=' + include;
 	}
 
 	function getRequestTimeout(_ref) {
@@ -4490,7 +4562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4584,7 +4656,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4662,7 +4734,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4734,7 +4806,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4806,7 +4878,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4881,7 +4953,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4956,7 +5028,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5023,7 +5095,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5085,7 +5157,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5154,7 +5226,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5225,7 +5297,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5296,7 +5368,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5363,7 +5435,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5430,7 +5502,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5506,7 +5578,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5571,7 +5643,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5652,7 +5724,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5743,7 +5815,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5829,7 +5901,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5993,7 +6065,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6072,7 +6144,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6170,7 +6242,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6309,7 +6381,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6422,7 +6494,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6504,7 +6576,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6617,7 +6689,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6738,7 +6810,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6880,7 +6952,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -6907,7 +6979,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports["default"];
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6921,7 +6993,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.patch = patch;
 	exports.del = del;
 
-	var _superagent = __webpack_require__(68);
+	var _superagent = __webpack_require__(69);
 
 	var _superagent2 = _interopRequireDefault(_superagent);
 
@@ -7032,7 +7104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
@@ -7049,11 +7121,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  root = this;
 	}
 
-	var Emitter = __webpack_require__(69);
-	var RequestBase = __webpack_require__(70);
-	var isObject = __webpack_require__(71);
-	var ResponseBase = __webpack_require__(72);
-	var Agent = __webpack_require__(74);
+	var Emitter = __webpack_require__(70);
+	var RequestBase = __webpack_require__(71);
+	var isObject = __webpack_require__(72);
+	var ResponseBase = __webpack_require__(73);
+	var Agent = __webpack_require__(75);
 
 	/**
 	 * Noop.
@@ -7958,7 +8030,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
@@ -8074,6 +8146,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      break;
 	    }
 	  }
+
+	  // Remove event specific arrays for event types that no
+	  // one is subscribed for to avoid memory leak.
+	  if (callbacks.length === 0) {
+	    delete this._callbacks['$' + event];
+	  }
+
 	  return this;
 	};
 
@@ -8087,8 +8166,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	Emitter.prototype.emit = function(event){
 	  this._callbacks = this._callbacks || {};
-	  var args = [].slice.call(arguments, 1)
+
+	  var args = new Array(arguments.length - 1)
 	    , callbacks = this._callbacks['$' + event];
+
+	  for (var i = 1; i < arguments.length; i++) {
+	    args[i - 1] = arguments[i];
+	  }
 
 	  if (callbacks) {
 	    callbacks = callbacks.slice(0);
@@ -8127,7 +8211,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8135,7 +8219,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * Module of mixed-in functions shared between node and client code
 	 */
-	var isObject = __webpack_require__(71);
+	var isObject = __webpack_require__(72);
 
 	/**
 	 * Expose `RequestBase`.
@@ -8827,7 +8911,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -8848,7 +8932,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8857,7 +8941,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Module dependencies.
 	 */
 
-	var utils = __webpack_require__(73);
+	var utils = __webpack_require__(74);
 
 	/**
 	 * Expose `ResponseBase`.
@@ -8990,7 +9074,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -9067,7 +9151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports) {
 
 	function Agent() {
