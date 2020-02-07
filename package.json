@@ -13,7 +13,7 @@
   "browser": "./dist/web/pubnub.min.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/pubnub/javascript.git"
+    "url": "git://github.com/jpollock/javascript.git"
   },
   "keywords": [
     "cloud",

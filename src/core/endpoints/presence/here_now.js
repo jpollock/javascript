@@ -36,11 +36,14 @@ export function isAuthSupported(): boolean {
 }
 
 export function prepareParams(modules: ModulesInject, incomingParams: HereNowArguments): Object {
-  let { channelGroups = [], includeUUIDs = true, includeState = false } = incomingParams;
+  let { channelGroups = [], includeUUIDs = true, includeState = false, sort = null, filter = null } = incomingParams;
   const params = {};
 
   if (!includeUUIDs) params.disable_uuids = 1;
   if (includeState) params.state = 1;
+
+  if (sort !== null) params.sort = sort;
+  if (filter !== null) params.filter = filter;
 
   if (channelGroups.length > 0) {
     params['channel-group'] = channelGroups.join(',');
@@ -50,7 +53,7 @@ export function prepareParams(modules: ModulesInject, incomingParams: HereNowArg
 }
 
 export function handleResponse(modules: ModulesInject, serverResponse: Object, incomingParams: HereNowArguments): Object {
-  let { channels = [], channelGroups = [], includeUUIDs = true, includeState = false } = incomingParams;
+  let { channels = [], channelGroups = [], includeUUIDs = true, includeState = false, sort = null, filter = null } = incomingParams;
 
   let prepareSingularChannel = () => {
     let response = {};

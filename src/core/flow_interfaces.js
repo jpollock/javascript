@@ -294,7 +294,9 @@ type HereNowArguments = {
   channels: Array<string>,
   channelGroups: Array<string>,
   includeUUIDs: boolean,
-  includeState: boolean
+  includeState: boolean,
+  sort: string,
+  filter: string
 }
 
 type WhereNowArguments = {
