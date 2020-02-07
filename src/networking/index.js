@@ -34,7 +34,8 @@ export default class {
 
     this._maxSubDomain = 20;
     this._currentSubDomain = Math.floor(Math.random() * this._maxSubDomain);
-    this._providedFQDN = (this._config.secure ? 'https://' : 'http://') + this._config.origin;
+    this._providedFQDN =
+      (this._config.secure ? 'https://' : 'http://') + this._config.origin;
     this._coreParams = {};
 
     // create initial origins
@@ -43,7 +44,7 @@ export default class {
 
   nextOrigin(): string {
     // if a custom origin is supplied, use do not bother with shuffling subdomains
-    if (this._providedFQDN.indexOf('pubsub.') === -1) {
+    if (!this._providedFQDN.match(/ps\.pndsn\.com$/i)) {
       return this._providedFQDN;
     }
 
@@ -57,7 +58,10 @@ export default class {
 
     newSubDomain = this._currentSubDomain.toString();
 
-    return this._providedFQDN.replace('pubsub', `ps${newSubDomain}`);
+    return this._providedFQDN.replace(
+      'ps.pndsn.com',
+      `ps${newSubDomain}.pndsn.com`
+    );
   }
 
   hasModule(name: string) {
@@ -65,8 +69,8 @@ export default class {
   }
 
   // origin operations
-  shiftStandardOrigin(failover: boolean = false): string {
-    this._standardOrigin = this.nextOrigin(failover);
+  shiftStandardOrigin(): string {
+    this._standardOrigin = this.nextOrigin();
 
     return this._standardOrigin;
   }
@@ -75,8 +79,22 @@ export default class {
     return this._standardOrigin;
   }
 
-  POST(params: Object, body: string, endpoint: EndpointDefinition, callback: Function) {
+  POST(
+    params: Object,
+    body: string,
+    endpoint: EndpointDefinition,
+    callback: Function
+  ) {
     return this._modules.post(params, body, endpoint, callback);
+  }
+
+  PATCH(
+    params: Object,
+    body: string,
+    endpoint: EndpointDefinition,
+    callback: Function
+  ) {
+    return this._modules.patch(params, body, endpoint, callback);
   }
 
   GET(params: Object, endpoint: EndpointDefinition, callback: Function) {
@@ -88,19 +106,38 @@ export default class {
   }
 
   _detectErrorCategory(err: Object): string {
-    if (err.code === 'ENOTFOUND') return categoryConstants.PNNetworkIssuesCategory;
-    if (err.code === 'ECONNREFUSED') return categoryConstants.PNNetworkIssuesCategory;
-    if (err.code === 'ECONNRESET') return categoryConstants.PNNetworkIssuesCategory;
-    if (err.code === 'EAI_AGAIN') return categoryConstants.PNNetworkIssuesCategory;
+    if (err.code === 'ENOTFOUND') {
+      return categoryConstants.PNNetworkIssuesCategory;
+    }
+    if (err.code === 'ECONNREFUSED') {
+      return categoryConstants.PNNetworkIssuesCategory;
+    }
+    if (err.code === 'ECONNRESET') {
+      return categoryConstants.PNNetworkIssuesCategory;
+    }
+    if (err.code === 'EAI_AGAIN') {
+      return categoryConstants.PNNetworkIssuesCategory;
+    }
 
-    if (err.status === 0 || (err.hasOwnProperty('status') && typeof err.status === 'undefined')) return categoryConstants.PNNetworkIssuesCategory;
+    if (
+      err.status === 0 ||
+      (err.hasOwnProperty('status') && typeof err.status === 'undefined')
+    ) {
+      return categoryConstants.PNNetworkIssuesCategory;
+    }
     if (err.timeout) return categoryConstants.PNTimeoutCategory;
 
-    if (err.code === 'ETIMEDOUT') return categoryConstants.PNNetworkIssuesCategory;
+    if (err.code === 'ETIMEDOUT') {
+      return categoryConstants.PNNetworkIssuesCategory;
+    }
 
     if (err.response) {
-      if (err.response.badRequest) return categoryConstants.PNBadRequestCategory;
-      if (err.response.forbidden) return categoryConstants.PNAccessDeniedCategory;
+      if (err.response.badRequest) {
+        return categoryConstants.PNBadRequestCategory;
+      }
+      if (err.response.forbidden) {
+        return categoryConstants.PNAccessDeniedCategory;
+      }
     }
 
     return categoryConstants.PNUnknownCategory;

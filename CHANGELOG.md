@@ -1,3 +1,210 @@
+﻿## [v4.27.3](https://github.com/pubnub/javascript/tree/v4.27.3)
+  January-06-2020
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.27.2...v4.27.3)
+
+
+
+- ⭐ Support for APNS2 Push API
+- ⭐ Restore functionality to set heartbeat interval when presence timeout is set below the default
+
+
+## [v4.27.2](https://github.com/pubnub/javascript/tree/v4.27.2)
+  December-05-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.27.1...v4.27.2)
+
+
+
+- ⭐ disable presence heartbeats by default
+
+
+## [v4.27.1](https://github.com/pubnub/javascript/tree/v4.27.1)
+  November-20-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.27.0...v4.27.1)
+
+
+
+- ⭐ Make changes in fetch_messages endpoint to move message actions (if any) for message from 'data' to 'actions' property (old 'data' will be in place for few updates to not break existing clients).
+- ⭐ fix PAMv3 tests mocked signature
+- ⭐ fix lint warnings for tests and code
+- ⭐ fix gulp build so that failures in test and lint will trigger failure in travis
+
+
+## [v4.27.0](https://github.com/pubnub/javascript/tree/v4.27.0)
+  October-08-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.26.1...v4.27.0)
+
+
+
+- ⭐ Add Message Actions API support which allow to: add, remove and fetch previously added action  
+- ⭐ Add new arguments to fetch messages function which allow to fetch previously added actions and message metadata  
+- ⭐ Add new handler which can be used to track message actions addition / removal events
+
+
+## [v4.26.1](https://github.com/pubnub/javascript/tree/v4.26.1)
+  September-27-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.26.0...v4.26.1)
+
+
+
+- ⭐ Ensures history response is an array before iterating it
+
+
+
+## [v4.26.0](https://github.com/pubnub/javascript/tree/v4.26.0)
+  September-20-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.25.2...v4.26.0)
+
+
+
+- ⭐ Add support for auth tokens with Objects for Users, Spaces and Memberships
+
+
+
+## [v4.25.2](https://github.com/pubnub/javascript/tree/v4.25.2)
+  September-03-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.25.1...v4.25.2)
+
+
+
+- ⭐ Fix issue with subdomains ending in 'ps'
+
+
+
+## [v4.25.1](https://github.com/pubnub/javascript/tree/v4.25.1)
+  August-23-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.25.0...v4.25.1)
+
+
+
+- ⭐ Fix regression: Fix titanium build to support recent version
+
+
+
+## [v4.25.0](https://github.com/pubnub/javascript/tree/v4.25.0)
+  August-16-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.24.6...v4.25.0)
+
+
+
+- ⭐ Fix regression: Add Objects support for Users, Spaces and Memberships
+
+
+
+## [v4.24.6](https://github.com/pubnub/javascript/tree/v4.24.6)
+  August-09-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.24.5...v4.24.6)
+
+
+
+- ⭐ Fix regression: 'PubNub is not a constructor' in Node.js
+
+
+
+## [v4.24.5](https://github.com/pubnub/javascript/tree/v4.24.5)
+  August-07-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.24.4...v4.24.5)
+
+
+
+- ⭐ Add Signals support
+
+
+
+## [v4.24.4](https://github.com/pubnub/javascript/tree/v4.24.4)
+  July-26-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.24.0...v4.24.4)
+
+
+
+- ⭐ Add minimum presence timeout
+
+
+
+## [v4.24.3](https://github.com/pubnub/javascript/tree/v4.24.3)
+  June-19-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.24.0...v4.24.3)
+
+
+
+- ⭐ Added support to enable heartbeat requests while subscribe when heartbeat interval is provided
+
+
+
+## [v4.24.2](https://github.com/pubnub/javascript/tree/v4.24.2)
+  June-13-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.24.0...v4.24.2)
+
+
+
+- ⭐ Added try catch block to handle exception for JSON.parse function
+- ⭐ Changed default origin to ps.pndsn.com
+
+
+
+## [v4.24.1](https://github.com/pubnub/javascript/tree/v4.24.1)
+  June-06-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.24.0...v4.24.1)
+
+
+
+- ⭐ Maintains the state when presence heartbeat is explicitly disabled
+
+
+
+## [v4.24.0](https://github.com/pubnub/javascript/tree/v4.24.0)
+  May-09-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.23.0...v4.24.0)
+
+
+
+- ⭐ Disables the presence heartbeat by default when a subscribe is called. Presence heartbeat can still be enabled explicitly.
+
+
+
+## [v4.23.0](https://github.com/pubnub/javascript/tree/v4.23.0)
+  March-14-2019
+
+
+  [Full Changelog](https://github.com/pubnub/javascript/compare/v4.22.0...v4.23.0)
+
+
+
+- ⭐ The `timetoken` parameter is deprecated in the `message-counts` function. Use `channelTimetokens` instead, pass one value in `channelTimetokens` to achieve the same results
+
+
+
 ## [v4.22.0](https://github.com/pubnub/javascript/tree/v4.22.0)
   March-04-2019
 

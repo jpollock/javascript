@@ -2,15 +2,22 @@
 /* global location */
 
 import uuidGenerator from './uuid';
-import { InternalSetupStruct, DatabaseInterface, KeepAliveStruct, ProxyStruct } from '../flow_interfaces';
+import {
+  InternalSetupStruct,
+  DatabaseInterface,
+  KeepAliveStruct,
+  ProxyStruct,
+} from '../flow_interfaces';
+
+const PRESENCE_TIMEOUT_MINIMUM: number = 20;
+const PRESENCE_TIMEOUT_DEFAULT: number = 300;
 
 type ConfigConstructArgs = {
   setup: InternalSetupStruct,
-  db: DatabaseInterface
-}
+  db: DatabaseInterface,
+};
 
 export default class {
-
   _db: DatabaseInterface;
 
   subscribeKey: string;
@@ -106,6 +113,12 @@ export default class {
   _useSendBeacon: boolean;
 
   /*
+    allow frameworks to append to the PNSDK parameter
+    the key should be an identifier for the specific framework to prevent duplicates
+  */
+  _PNSDKSuffix: { [key: string]: string };
+
+  /*
     if set, the SDK will alert if more messages arrive in one subscribe than the theshold
   */
   requestMessageCountThreshold: number;
@@ -115,20 +128,22 @@ export default class {
    */
   restore: boolean;
 
-
   /*
     support for client deduping
   */
-  dedupeOnSubscribe: boolean
-  maximumCacheSize: number
+  dedupeOnSubscribe: boolean;
+
+  maximumCacheSize: number;
 
   /*
     support customp encryption and decryption functions.
   */
-  customEncrypt: Function // function to support custome encryption of messages
-  customDecrypt: Function // function used to decrypt old version messages
+  customEncrypt: Function; // function to support custome encryption of messages
 
-  constructor({ setup, db } : ConfigConstructArgs) {
+  customDecrypt: Function; // function used to decrypt old version messages
+
+  constructor({ setup, db }: ConfigConstructArgs) {
+    this._PNSDKSuffix = {};
     this._db = db;
 
     this.instanceId = `pn-${uuidGenerator.createUUID()}`;
@@ -143,7 +158,7 @@ export default class {
 
     this.setFilterExpression(setup.filterExpression);
 
-    this.origin = setup.origin || 'pubsub.pndsn.com';
+    this.origin = setup.origin || 'ps.pndsn.com';
     this.secure = setup.ssl || false;
     this.restore = setup.restore || false;
     this.proxy = setup.proxy;
@@ -166,7 +181,8 @@ export default class {
     this.suppressLeaveEvents = setup.suppressLeaveEvents || false;
 
     this.announceFailedHeartbeats = setup.announceFailedHeartbeats || true;
-    this.announceSuccessfulHeartbeats = setup.announceSuccessfulHeartbeats || false;
+    this.announceSuccessfulHeartbeats =
+      setup.announceSuccessfulHeartbeats || false;
 
     this.useInstanceId = setup.useInstanceId || false;
     this.useRequestId = setup.useRequestId || false;
@@ -180,7 +196,11 @@ export default class {
     // set config on beacon (https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) usage
     this.setSendBeaconConfig(setup.useSendBeacon || true);
     // how long the SDK will report the client to be alive before issuing a timeout
-    this.setPresenceTimeout(setup.presenceTimeout || 300);
+    if (setup.presenceTimeout) {
+      this.setPresenceTimeout(setup.presenceTimeout);
+    } else {
+      this._presenceTimeout = PRESENCE_TIMEOUT_DEFAULT;
+    }
 
     if (setup.heartbeatInterval != null) {
       this.setHeartbeatInterval(setup.heartbeatInterval);
@@ -190,23 +210,58 @@ export default class {
   }
 
   // exposed setters
-  getAuthKey(): string { return this.authKey; }
-  setAuthKey(val: string): this { this.authKey = val; return this; }
-  setCipherKey(val: string): this { this.cipherKey = val; return this; }
-  getUUID(): string { return this.UUID; }
+  getAuthKey(): string {
+    return this.authKey;
+  }
+
+  setAuthKey(val: string): this {
+    this.authKey = val;
+    return this;
+  }
+
+  setCipherKey(val: string): this {
+    this.cipherKey = val;
+    return this;
+  }
+
+  getUUID(): string {
+    return this.UUID;
+  }
+
   setUUID(val: string): this {
     if (this._db && this._db.set) this._db.set(`${this.subscribeKey}uuid`, val);
     this.UUID = val;
     return this;
   }
 
-  getFilterExpression(): string { return this.filterExpression; }
-  setFilterExpression(val: string): this { this.filterExpression = val; return this; }
+  getFilterExpression(): string {
+    return this.filterExpression;
+  }
 
-  getPresenceTimeout(): number { return this._presenceTimeout; }
+  setFilterExpression(val: string): this {
+    this.filterExpression = val;
+    return this;
+  }
+
+  getPresenceTimeout(): number {
+    return this._presenceTimeout;
+  }
+
   setPresenceTimeout(val: number): this {
-    this._presenceTimeout = val;
-    this.setHeartbeatInterval((this._presenceTimeout / 2) - 1);
+    if (val >= PRESENCE_TIMEOUT_MINIMUM) {
+      this._presenceTimeout = val;
+    } else {
+      this._presenceTimeout = PRESENCE_TIMEOUT_MINIMUM;
+
+      // eslint-disable-next-line no-console
+      console.log(
+        'WARNING: Presence timeout is less than the minimum. Using minimum value: ',
+        this._presenceTimeout
+      );
+    }
+
+    this.setHeartbeatInterval(this._presenceTimeout / 2 - 1);
+
     return this;
   }
 
@@ -214,21 +269,53 @@ export default class {
     this.proxy = proxy;
   }
 
-  getHeartbeatInterval(): number { return this._heartbeatInterval; }
-  setHeartbeatInterval(val: number): this { this._heartbeatInterval = val; return this; }
+  getHeartbeatInterval(): number {
+    return this._heartbeatInterval;
+  }
+
+  setHeartbeatInterval(val: number): this {
+    this._heartbeatInterval = val;
+    return this;
+  }
 
   // deprecated setters.
-  getSubscribeTimeout(): number { return this._subscribeRequestTimeout; }
-  setSubscribeTimeout(val: number): this { this._subscribeRequestTimeout = val; return this; }
+  getSubscribeTimeout(): number {
+    return this._subscribeRequestTimeout;
+  }
 
-  getTransactionTimeout(): number { return this._transactionalRequestTimeout; }
-  setTransactionTimeout(val: number): this { this._transactionalRequestTimeout = val; return this; }
+  setSubscribeTimeout(val: number): this {
+    this._subscribeRequestTimeout = val;
+    return this;
+  }
 
-  isSendBeaconEnabled(): boolean { return this._useSendBeacon; }
-  setSendBeaconConfig(val: boolean): this { this._useSendBeacon = val; return this; }
+  getTransactionTimeout(): number {
+    return this._transactionalRequestTimeout;
+  }
+
+  setTransactionTimeout(val: number): this {
+    this._transactionalRequestTimeout = val;
+    return this;
+  }
+
+  isSendBeaconEnabled(): boolean {
+    return this._useSendBeacon;
+  }
+
+  setSendBeaconConfig(val: boolean): this {
+    this._useSendBeacon = val;
+    return this;
+  }
 
   getVersion(): string {
-    return '4.22.0';
+    return '4.27.3';
+  }
+
+  _addPnsdkSuffix(name: string, suffix: string) {
+    this._PNSDKSuffix[name] = suffix;
+  }
+
+  _getPnsdkSuffix(separator: string): string {
+    return Object.keys(this._PNSDKSuffix).reduce((result, key) => result + separator + this._PNSDKSuffix[key], '');
   }
 
   _decideUUID(providedUUID: string): string {
